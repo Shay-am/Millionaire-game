@@ -1,0 +1,152 @@
+*,
+*::after,
+::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+main {
+	display: flex;
+}
+
+.cointenar {
+	background-image: url("./assets/logo-millionear.png");
+	background-repeat: no-repeat;
+	width: 100vw;
+	display: flex;
+	background-size: cover;
+	flex-direction: column;
+	justify-content: end;
+	align-items: center;
+}
+
+.field-question {
+	display: flex;
+	font-family: "Karla", sans-serif;
+	font-weight: 700;
+	width: 49em;
+	height: 2.4em;
+	font-size: 1.2em;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 0.5em;
+	color: white;
+	border: 1px solid blue;
+	background-color: hsla(0, 6%, 6%, 100%);
+}
+.cointenar-answer {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 58em;
+	margin-bottom: 5em;
+}
+
+.field-answer {
+	position: relative;
+	display: flex;
+	font-family: "Karla", sans-serif;
+	font-size: 1.1em;
+	min-width: 25em;
+	height: 2em;
+	align-items: center;
+	justify-content: center;
+	background-color: hsla(0, 6%, 10%, 100%);
+	color: white;
+	border: 1px solid blue;
+	margin: 0.2em 0.1em;
+}
+/* .field-answer:hover {
+	background-color: #008793;
+	cursor: pointer;
+} */
+
+.field-answer::before {
+	content: "";
+	position: absolute;
+	text-align: center;
+	left: 0.1em;
+	top: 0.3em;
+	color: gold;
+	display: block;
+}
+
+.fieldA:before {
+	content: "*  A";
+}
+.fieldB:before {
+	content: "*  B";
+}
+.fieldC:before {
+	content: "*  C";
+}
+.fieldD:before {
+	content: "*  D";
+}
+
+button {
+	position: absolute;
+	right: 20px;
+	top: 10px;
+}
+
+.chart-cointenar {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-left: auto;
+	width: 20vw;
+	height: 100vh;
+	background-image: linear-gradient(to right top, #051937, #004d7a, #008793);
+}
+
+.square {
+	display: flex;
+	width: 13em;
+	height: 3em;
+	border: 1px solid black;
+	border-radius: 40%;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 0.5em;
+	color: aliceblue;
+}
+.square:hover {
+	background-color: #008793;
+
+	color: #000;
+}
+
+.selected {
+	background-color: yellow;
+	z-index: 0;
+	color: #000;
+}
+.correct {
+	animation: 0.2s ease-in-out 0s 9 backgroundColor;
+	background: #0fc908;
+}
+
+@keyframes backgroundColor {
+	0% {
+		background: #004d7a;
+	}
+	50% {
+		background: #0fc908;
+	}
+
+	100% {
+		background: #4a5db3;
+	}
+}
+
+.uncorrect {
+	background-color: red;
+}
+.rate {
+	background-color: #0fc908;
+}
+.prev {
+	opacity: 0.7;
+}
